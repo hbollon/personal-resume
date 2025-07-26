@@ -1,0 +1,162 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV Hugo Bollon - Single page optimized version
+% Template: https://www.overleaf.com/latex/templates/awesome-cv/dfnvtnhzhhbm
+
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configuration ------------------------------------------------
+\geometry{left=1.2cm, top=1.0cm, right=1.2cm, bottom=1.2cm, footskip=.5cm}  % Reduced margins
+\colorlet{awesome}{awesome-red}  % Choose theme color
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}  % Separator
+\renewcommand{\acvSectionTopSkip}{4pt}
+\renewcommand{\acvSectionContentTopSkip}{2mm}
+
+
+% Personal Data -------------------------------------------------
+\name{Hugo}{Bollon}
+\position{Backend / DevOps Engineer \& Open Source Enthusiast}
+\address{Grenoble, France}
+\mobile{(+33) 6 51 99 80 78}
+\email{hugo.bollon@proton.me}
+\homepage{hugobollon.me}
+\github{hbollon}
+\linkedin{hugobollon}
+\extrainfo{Driving license: B}
+
+% Begin Document -----------------------------------------------
+\begin{document}
+
+%-------------------- Profile ----------------------------------
+\makecvheader
+
+\cvsection{Summary}
+
+\cvparagraph{
+Passionate software engineer specialized in \textbf{Go} and \textbf{Open Source}, with solid experience in \textbf{backend development} and \textbf{DevOps engineering} (Kubernetes, AWS, CI/CD). After several years designing and maintaining cloud platforms, I now wish to put my skills and motivation to work on high-impact projects as a \textbf{Backend or Fullstack engineer}.
+}
+
+%-------------------- Skills -----------------------------------
+\cvsection{Skills}
+
+\begin{cvskills}
+  \cvskill
+    {Languages}
+    {Go, Python, Java, C/C++, JavaScript, TypeScript, Bash}
+  \cvskill
+    {Frontend}
+    {Vue, Angular}
+  \cvskill
+    {Backend}
+    {API REST, Gorm, Gin, Echo, Gorilla Mux}
+  \cvskill
+    {DevOps}
+    {Kubernetes, Docker, Helm, ArgoCD, Pulumi, Terraform, GitOps, AWS (EKS, RDS, EC2, ECS, Fargate), IaC, CI/CD}
+  \cvskill
+    {Database}
+    {PostgreSQL, SQLite, Neo4j}
+  \cvskill
+    {Environments}
+    {Linux, Git, GitHub Actions, GitLab CI}
+  \cvskill
+    {Languages}
+    {French (native level), English B2 (TOEIC 905), Japanese A1 (learning)}
+\end{cvskills}
+
+%-------------------- Experience -------------------------------
+\cvsection{Experience}
+
+\begin{cventries}
+  \cventry
+    {DevOps Engineer}
+    {Camptocamp SA}
+    {Chambéry, France}
+    {Sep. 2021 - Present}
+    {
+      \vspace{2.0mm}
+      \begin{cvitems}
+        \item {Design, automation, and maintenance of Kubernetes clusters with multiples cloud providers (AWS, Exoscale, Scaleway) using Infrastructure as Code (Pulumi, Terraform) for reliable and scalable platforms.}
+        \item {Backend development in Go for internal tools, APIs, and automations. External open-source contributions (Terraform providers, Zitadel, etc.).}
+        \item {Open-source lead for the Infrastructure department: management, maintenance, and evolution of Camptocamp Infrastructure Solutions' publicly licensed projects.}
+        \item {Design and management of CI pipelines to automate build, lint, test, and release stages, using Github Actions and Dagger.}
+        \item {Implementation of CD pipelines based on GitOps practices with ArgoCD, ensuring automated, reproducible, and secure Kubernetes deployments.}
+        \item {Containerization and orchestration of workloads: Docker image design, Docker Compose configuration, orchestrated deployments with Kubernetes, and containerized CI with Dagger.}
+        \item {Close collaboration with the Geospatial department: development of scripts and tools in Python and JavaScript (Vue 3, Angular), design of Helm charts, and optimization of Docker images for packaging and deploying their applications.}
+        \item {Deployment and configuration of Monitoring, Logging, and Alerting solutions (Prometheus, Elastic, Grafana).}
+        \item {Federated OIDC authentication via Keycloak and Zitadel.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Go Developer Intern}
+    {Camptocamp SA}
+    {Chambéry, France}
+    {Jun. 2021 - Sep. 2021}
+    {
+      \vspace{2.0mm}
+      \begin{cvitems}
+        \item {Development and maintenance of Terraboard (Terraform observability tool).}
+        \item {Migration of the frontend from AngularJS to Vue 3 / TypeScript.}
+        \item {Backend API development in Go (Gorm, Gorilla Mux).}
+        \item {Writing unit tests and CI/CD automation.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Android Developer Intern}
+    {LAET - ENTPE}
+    {Chambéry, France}
+    {Jan. 2020 - May 2020}
+    {
+      \vspace{2.0mm}
+      \begin{cvitems}
+        \item {Native Android app (Java) for digitizing the Urbalog board game with multi-device support using Nearby Connections API.}
+      \end{cvitems}
+    }
+
+\end{cventries}
+
+%-------------------- Education --------------------------------
+\cvsection{Education}
+
+\begin{cventries}
+  \cventry
+    {MSc Computer Science (with honours)}
+    {University Savoie Mont-Blanc}
+    {Le-Bourget-Du-Lac, France}
+    {2020 -- 2022}
+    {}
+
+  \cventry
+    {BSc Computer Science (with honours)}
+    {University Savoie Mont-Blanc}
+    {Le-Bourget-Du-Lac, France}
+    {2017 -- 2020}
+    {}
+
+  \cventry
+    {Scientific Baccalaureate (ISN)}
+    {High School of l'Albanais}
+    {Rumilly, France}
+    {2014 -- 2017}
+    {}
+
+\end{cventries}
+
+%-------------------- Certifications ---------------------------
+\cvsection{Certifications}
+
+\begin{itemize}
+  \item {\textbf{TOEIC}: 905/990 (Feb 2022) — Listening: 440/495 (B2), Reading: 465/495 (C1)}
+  \item {\textbf{AWS Certified Cloud Practitioner} (June 2023) — ID: PST3Q8DCVE41Q5GD}
+\end{itemize}
+
+%-------------------- Strengths --------------------------------
+\cvsection{Strengths}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc}
+Takes initiative & Self-taught & Sociable & Attentive to requirements & Fast learner & Team spirit \\
+\end{tabular*}
+
+\end{document}
