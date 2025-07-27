@@ -1,0 +1,66 @@
+name: Build & publish
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        file:
+          - Hugo_Bollon_CV_English_AwesomeCV
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up LaTeX
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: ${{ matrix.file }}.tex
+          args: -pdflatex=lualatex -pdf -shell-escape -file-line-error -halt-on-error -interaction=nonstopmode
+
+      - name: Upload generated PDF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.file }}-pdf
+          path: ${{ matrix.file }}.pdf
+
+  commit:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download all PDFs
+        uses: actions/download-artifact@v4
+        with:
+          path: ./artifacts
+
+      - name: Move PDFs to repo root
+        run: |
+          find ./artifacts -name '*.pdf' -exec mv {} . \;
+
+      - name: Configure git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Add PDFs
+        run: |
+          for pdf in *.pdf; do
+            git add "$pdf"
+          done
+
+      - name: Commit changes
+        run: |
+          git commit -m "chore: update generated PDFs" || echo "No changes to commit"
+
+      - name: Push changes
+        run: git push
