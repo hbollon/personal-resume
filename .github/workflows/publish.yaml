@@ -15,6 +15,7 @@ jobs:
       matrix:
         file:
           - Hugo_Bollon_CV_English_AwesomeCV
+          - Hugo_Bollon_CV_French_AwesomeCV
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

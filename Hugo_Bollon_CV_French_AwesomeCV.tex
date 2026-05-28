@@ -1,0 +1,165 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV Hugo Bollon - Version d'une page optimisée
+% Template: https://www.overleaf.com/latex/templates/awesome-cv/dfnvtnhzhhbm
+
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configuration ------------------------------------------------
+\geometry{left=1.2cm, top=1.0cm, right=1.2cm, bottom=1.2cm, footskip=.5cm}  % Marges réduites
+\colorlet{awesome}{awesome-red}  % Choisir la couleur du thème
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}  % Séparateur
+\renewcommand{\acvSectionTopSkip}{4pt}
+\renewcommand{\acvSectionContentTopSkip}{2mm}
+
+
+% Données Personnelles -------------------------------------------------
+\name{Hugo}{Bollon}
+\position{Ingénieur Backend / DevOps \& Passionné d'Open Source}
+\address{Grenoble, France}
+\mobile{(+33) 6 51 99 80 78}
+\email{hugo.bollon@proton.me}
+\homepage{hugobollon.dev}
+\github{hbollon}
+\linkedin{hugobollon}
+\extrainfo{Permis de conduire : B}
+
+% Début du Document -----------------------------------------------
+\begin{document}
+
+%-------------------- Profil ----------------------------------
+\makecvheader
+
+\cvsection{Résumé}
+
+\cvparagraph{
+Ingénieur logiciel spécialisé en \textbf{Go} et passionné par l'\textbf{Open Source}, avec une solide expérience en \textbf{développement backend} et \textbf{ingénierie DevOps} (Kubernetes, AWS, CI/CD). Fort de plusieurs années d'expérience à concevoir et maintenir des plateformes cloud, je souhaite désormais mettre mes compétences et ma motivation au service de projets à fort impact en tant qu'\textbf{ingénieur Backend ou Fullstack}.
+}
+
+%-------------------- Compétences -----------------------------------
+\cvsection{Compétences}
+
+\begin{cvskills}
+  \cvskill
+    {Langages}
+    {Go, Python, Java, C/C++, JavaScript, TypeScript, Bash}
+  \cvskill
+    {Frontend}
+    {Vue, Angular}
+  \cvskill
+    {Backend}
+    {API REST, Gorm, Gin, Echo, Gorilla Mux}
+  \cvskill
+    {DevOps}
+    {Kubernetes, Docker, Helm, ArgoCD, Pulumi, Terraform, GitOps, AWS (EKS, RDS, EC2, ECS, Fargate), IaC, CI/CD}
+  \cvskill
+    {Base de données}
+    {PostgreSQL, SQLite, Neo4j}
+  \cvskill
+    {IA / LLM Systems}
+    {Opencode, Workflows agentiques, Architectures multi-agents, MCP, Local LLMs (llama.cpp, llama-swap)}
+  \cvskill
+    {Environnements}
+    {Linux, Git, GitHub Actions, GitLab CI}
+  \cvskill
+    {Langues}
+    {Français (langue maternelle), Anglais B2 (TOEIC 905), Japonais A1 (en apprentissage)}
+\end{cvskills}
+
+%-------------------- Expérience -------------------------------
+\cvsection{Expérience}
+
+\begin{cventries}
+  \cventry
+    {Ingénieur DevOps}
+    {Camptocamp SA}
+    {Chambéry, France}
+    {Sep. 2021 - Présent}
+    {
+      \vspace{2.0mm}
+      \begin{cvitems}
+        \item {Conception, automatisation et maintenance de clusters Kubernetes avec plusieurs providers cloud (AWS, Exoscale, Scaleway) en utilisant l'Infrastructure as Code (Pulumi, Terraform) pour des plateformes fiables et évolutives.}
+        \item {Développement backend en Go pour des outils internes, APIs et automatisations. Contributions open-source externes (providers Terraform, Zitadel, etc.).}
+        \item {Référent open-source du département Infrastructure : gestion, maintenance et évolution des projets sous licence publique de Camptocamp Infrastructure Solutions.}
+        \item {Conception et gestion de pipelines CI pour automatiser les étapes de build, lint, test et release, en utilisant Github Actions et Dagger.}
+        \item {Mise en place de pipelines CD basés sur des pratiques GitOps avec ArgoCD, assurant des déploiements Kubernetes automatisés, reproductibles et sécurisés.}
+        \item {Conteneurisation et orchestration de workloads : conception d'images Docker, configuration Docker Compose, déploiements orchestrés avec Kubernetes, et CI conteneurisée avec Dagger.}
+        \item {Collaboration étroite avec le département Géospatial de Camptocamp : développement en Python et JavaScript (Vue 3, Angular), conception de charts Helm, et optimisation d'images Docker pour le déploiement de leurs applications.}
+        \item {Déploiement et configuration de solutions de Monitoring, Logging et Alerting (Prometheus, Elastic, Grafana).}
+        \item {Authentification OIDC fédérée (Keycloak, Zitadel).}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Stagiaire Développeur Go}
+    {Camptocamp SA}
+    {Chambéry, France}
+    {Juin 2021 - Sep. 2021}
+    {
+      \vspace{2.0mm}
+      \begin{cvitems}
+        \item {Développement et maintenance de Terraboard (outil d'observabilité Terraform).}
+        \item {Migration du frontend d'AngularJS vers Vue 3 / TypeScript.}
+        \item {Développement d'API backend en Go (Gorm, Gorilla Mux).}
+        \item {Rédaction de tests unitaires et automatisation CI/CD.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Stagiaire Développeur Android}
+    {LAET - ENTPE}
+    {Chambéry, France}
+    {Jan. 2020 - Mai 2020}
+    {
+      \vspace{2.0mm}
+      \begin{cvitems}
+        \item {Application Android native (Java) pour la digitalisation du jeu de plateau Urbalog avec support multi-devices à l'aide de l'API Nearby Connections.}
+      \end{cvitems}
+    }
+
+\end{cventries}
+
+%-------------------- Formation --------------------------------
+\cvsection{Formation}
+
+\begin{cventries}
+  \cventry
+    {Master Informatique (avec mention)}
+    {Université Savoie Mont-Blanc}
+    {Le-Bourget-Du-Lac, France}
+    {2020 -- 2022}
+    {}
+
+  \cventry
+    {Licence Informatique (avec mention)}
+    {Université Savoie Mont-Blanc}
+    {Le-Bourget-Du-Lac, France}
+    {2017 -- 2020}
+    {}
+
+  \cventry
+    {Baccalauréat Scientifique (ISN)}
+    {Lycée de l'Albanais}
+    {Rumilly, France}
+    {2014 -- 2017}
+    {}
+
+\end{cventries}
+
+%-------------------- Certifications ---------------------------
+\cvsection{Certifications}
+
+\begin{itemize}
+  \item {\textbf{TOEIC} : 905/990 (Fév 2022) — Listening : 440/495 (B2), Reading : 465/495 (C1)}
+  \item {\textbf{AWS Certified Cloud Practitioner} (Juin 2023) — ID : PST3Q8DCVE41Q5GD}
+\end{itemize}
+
+%-------------------- Atouts --------------------------------
+\cvsection{Atouts}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc}
+Prise d'initiative & Autodidacte & Sociable & Attentif aux exigences & Apprentissage rapide & Esprit d'équipe \\
+\end{tabular*}
+
+\end{document}
